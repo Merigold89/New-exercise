@@ -3,16 +3,15 @@ import random
 letters = 'abcdefghijklmnouprstuvwyxyz'
 count = 0
 
-print("Create password 4 letters only lowercase")
-password = input("Password: ")
-
-if len(password) == 4:
-    pass
-else:
-    print('Password is invalid')
-    exit(0)
-
-try_password = ''
+while True:
+    print("Create password 4 letters only lowercase")
+    password = input("Password: ")
+    if len(password) == 4:
+        if password.lower() == password:
+            break
+    else:
+        print('Password is invalid')
+    try_password = ''
 
 while True:
     for i in range(4):
@@ -24,4 +23,4 @@ while True:
         print(f"Sprawdzono {count} kombinacji.")
         break
     else:
-        try_password = ""  # wyzeru try_password
+        try_password = ""  # wyzeruj try_password
